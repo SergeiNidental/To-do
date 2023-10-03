@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="header/header.css" />
+    <link rel="stylesheet" href="header/__logo/__logo.css" />
   </head>
   <body>
     <header class="header">
-      Logo
-      <!-- <img src="" alt="" class="header__logo"> -->
+      <img src="Src/Logo.svg" alt="Logo" class="header__logo" />
     </header>
     <form class="task-form">
       <input type="text" class="task-form__input-text" value="Add a new task" />
@@ -22,12 +22,16 @@
     </div>
     <form class="task-list">
       <div class="task-list__preview">
-        <!-- <img src="" alt="" class="task-list__img-preview"> -->
+        <img
+          src="Src/Clipboard.svg"
+          alt="Clipboard"
+          class="task-list__img-preview"
+        />
         <span class="task-list__text">Text</span>
       </div>
       <div class="task-list__wrapper task-list__wrapper_disable">
         <input type="checkbox" class="task-list__task" />
-        <!-- <img src="" alt="" class="task-list__basket"> -->
+        <img src="Src/trash.svg" alt="trash" class="task-list__basket" />
       </div>
     </form>
   </body>
