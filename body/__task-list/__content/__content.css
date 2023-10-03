@@ -1,0 +1,7 @@
+.task-list__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 736px;
+  font-weight: bold;
+}

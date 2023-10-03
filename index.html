@@ -26,6 +26,26 @@
   rel="stylesheet"
   href="body/__task-list/__task-list.css"
 />
+<link
+rel="stylesheet"
+href="body/__task-list/__content/__content.css"
+/>
+<link
+rel="stylesheet"
+href="body/__task-list/__content/__left-bar/__left-bar.css"
+/>
+<link
+rel="stylesheet"
+href="body/__task-list/__content/__right-bar/__right-bar.css"
+/>
+<link
+rel="stylesheet"
+href="body/__task-list/__content/_counter-wrapper/_counter-wrapper.css"
+/>
+<link
+rel="stylesheet"
+href="body/__task-list/__content/_wrapper-to-centre/_wrapper-to-centre.css"
+/>
   <body>
     <header class="header">
       <img src="Src/Logo.svg" alt="Logo" class="header__logo" />
@@ -36,10 +56,14 @@
     </form>
     <form class="task-list">
     <div class="task-list__content">
-      <span class="task-list__left-bar">Text</span>
-      <span class="task-list__left-counter">1</span>
-      <span class="task-list__right-bar">Text</span>
-      <span class="task-list__right-counter">1</span>
+        <div class="wrapper-left">
+      <span class="task-list__left-bar">Created tasks</span>
+      <span class="task-list__left-counter"><div class="task-list_counter-wrapper">0</div></span>
+    </div>
+    <div class="wrapper-right">
+      <span class="task-list__right-bar">Сompleted tasks</span>
+      <span class="task-list__right-counter"><div class="task-list_counter-wrapper">0</div></span>
+    </div>
     </div>
       <div class="task-list__preview">
         <img
