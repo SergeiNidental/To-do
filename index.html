@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="body/_font.css" />
+<link rel="stylesheet" href="body/__body.css">
     <link rel="stylesheet" href="body/__header/__header.css" />
     <link rel="stylesheet" href="body/__header/__logo/__logo.css" />
     <link rel="stylesheet" href="body/__task-form/__task-form.css" />
@@ -22,6 +22,10 @@
     rel="stylesheet"
     href="body/__task-form/__task-form__button/__task-form__img.css"
   />
+  <link
+  rel="stylesheet"
+  href="body/__task-list/__task-list.css"
+/>
   <body>
     <header class="header">
       <img src="Src/Logo.svg" alt="Logo" class="header__logo" />
@@ -30,13 +34,13 @@
       <input type="text" class="task-form__input-text font" value="Add a new task" />
       <button type="submit" class="task-form__button font">Add <img src="Src/plus.svg" alt="plus" class="task-form__img"></button>
     </form>
-    <div class="content">
-      <span class="content__left-bar">Text</span>
-      <span class="content__left-counter">1</span>
-      <span class="content__right-bar">Text</span>
-      <span class="countent__right-counter">1</span>
-    </div>
     <form class="task-list">
+    <div class="task-list__content">
+      <span class="task-list__left-bar">Text</span>
+      <span class="task-list__left-counter">1</span>
+      <span class="task-list__right-bar">Text</span>
+      <span class="task-list__right-counter">1</span>
+    </div>
       <div class="task-list__preview">
         <img
           src="Src/Clipboard.svg"

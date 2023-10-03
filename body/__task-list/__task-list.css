@@ -1,0 +1,9 @@
+.task-list {
+  background-color: rgba(26, 26, 26, 1);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 6em;
+}
