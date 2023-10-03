@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+  </head>
+  <body>
+    <header class="header">
+      Logo
+      <!-- <img src="" alt="" class="header__logo"> -->
+    </header>
+    <form class="task-form">
+      <input type="text" class="task-form__input-text" value="Add a new task" />
+      <input type="submit" class="task-form__input-submit" value="Add" />
+    </form>
+    <div class="content">
+      <span class="content__left-bar">Text</span>
+      <span class="content__left-counter">1</span>
+      <span class="content__right-bar">Text</span>
+      <span class="countent__right-counter">1</span>
+    </div>
+    <form class="task-list">
+      <div class="task-list__preview">
+        <!-- <img src="" alt="" class="task-list__img-preview"> -->
+        <span class="task-list__text">Text</span>
+      </div>
+      <div class="task-list__wrapper task-list__wrapper_disable">
+        <input type="checkbox" class="task-list__task" />
+        <!-- <img src="" alt="" class="task-list__basket"> -->
+      </div>
+    </form>
+  </body>
 </html>
