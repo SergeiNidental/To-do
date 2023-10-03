@@ -1,0 +1,11 @@
+.task-form__input-text {
+  height: 22px;
+  width: 606px;
+  padding: 16px;
+  border: 1px;
+  border-radius: 8px;
+  margin-right: 8px;
+  background-color: rgba(38, 38, 38, 1);
+  color: rgba(128, 128, 128, 1);
+  border-color: black;
+}

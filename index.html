@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="header/header.css" />
-    <link rel="stylesheet" href="header/__logo/__logo.css" />
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="body/_font.css" />
+    <link rel="stylesheet" href="body/__header/__header.css" />
+    <link rel="stylesheet" href="body/__header/__logo/__logo.css" />
+    <link rel="stylesheet" href="body/__task-form/__task-form.css" />
+    <link
+      rel="stylesheet"
+      href="body/__task-form/__task-form__input-text/__task-form__input-text.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-form/__task-form__button/task-form__button.css"
+    />
+    <link
+    rel="stylesheet"
+    href="body/__task-form/__task-form__button/__task-form__img.css"
+  />
   <body>
     <header class="header">
       <img src="Src/Logo.svg" alt="Logo" class="header__logo" />
     </header>
     <form class="task-form">
-      <input type="text" class="task-form__input-text" value="Add a new task" />
-      <input type="submit" class="task-form__input-submit" value="Add" />
+      <input type="text" class="task-form__input-text font" value="Add a new task" />
+      <button type="submit" class="task-form__button font">Add <img src="Src/plus.svg" alt="plus" class="task-form__img"></button>
     </form>
     <div class="content">
       <span class="content__left-bar">Text</span>
