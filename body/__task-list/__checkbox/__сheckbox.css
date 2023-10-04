@@ -1,0 +1,16 @@
+.task-list__label {
+  display: flex;
+}
+
+/* .task-list__checkbox {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} */
+
+/* .task-list__custom-checkbox {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+} */
