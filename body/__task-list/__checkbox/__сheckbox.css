@@ -6,4 +6,30 @@
   border: 2px solid rgba(78, 168, 222, 1);
   background-color: transparent;
   flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.task-list__vector {
+  display: none;
+  width: 15px;
+  height: 15px;
+}
+
+.task-list__checkbox:hover {
+  background-color: rgba(78, 168, 222, 0.5);
+}
+
+.task-list__checkbox:checked {
+  border: 2px solid rgba(94, 96, 206, 1);
+  background-color: rgba(94, 96, 206, 1);
+}
+.task-list__label {
+  position: relative;
+}
+
+.task-list__checkbox:checked + .task-list__label .task-list__vector {
+  display: inline;
+  position: absolute;
+  left: -5.5%;
+  top: 8%;
 }
