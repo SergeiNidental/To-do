@@ -1,0 +1,8 @@
+.task-list__text {
+  text-align: center;
+  padding: 3em;
+  color: rgba(128, 128, 128, 1);
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 0.6;
+}

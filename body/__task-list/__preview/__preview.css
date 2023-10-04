@@ -1,0 +1,11 @@
+.task-list__preview {
+  display: flex;
+  flex-direction: column;
+  width: 736px;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+  border-top: 2px solid rgba(51, 51, 51, 1);
+  border-radius: 20px;
+  margin-top: 2em;
+}
