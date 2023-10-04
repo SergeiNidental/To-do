@@ -1,0 +1,13 @@
+.task-list__checkbox-wrapper {
+  max-width: 688px;
+  background-color: rgba(38, 38, 38, 1);
+  padding: 1.5em;
+  border: 1px solid rgba(51, 51, 51, 1);
+  border-radius: 8px;
+  font-size: medium;
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: flex-end;
+}
