@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="body/__body.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="body/__body.css" />
     <link rel="stylesheet" href="body/__header/__header.css" />
     <link rel="stylesheet" href="body/__header/__logo/__logo.css" />
     <link rel="stylesheet" href="body/__task-form/__task-form.css" />
@@ -19,76 +22,105 @@
       href="body/__task-form/__task-form__button/task-form__button.css"
     />
     <link
-    rel="stylesheet"
-    href="body/__task-form/__task-form__button/__task-form__img.css"
-  />
-  <link
-  rel="stylesheet"
-  href="body/__task-list/__task-list.css"
-/>
-<link
-rel="stylesheet"
-href="body/__task-list/__content/__content.css"
-/>
-<link
-rel="stylesheet"
-href="body/__task-list/__content/__left-bar/__left-bar.css"
-/>
-<link
-rel="stylesheet"
-href="body/__task-list/__content/__right-bar/__right-bar.css"
-/>
-<link
-rel="stylesheet"
-href="body/__task-list/__content/_counter-wrapper/_counter-wrapper.css"
-/>
-<link
-rel="stylesheet"
-href="body/__task-list/__content/_wrapper-to-centre/_wrapper-to-centre.css"
-/>
-<link
-rel="stylesheet"
-href="body/__task-list/__preview/__preview.css"
-/>
-<link rel="stylesheet" href="body/__task-list/__preview/__img-preview/__img-preview.css">
-<link rel="stylesheet" href="body/__task-list/__preview/__task-list__text/__task-list__text.css">
-<link rel="stylesheet" href="body/__task-list/__preview/__task-list__text/_thin-font.css">
-<link rel="stylesheet" href="body/__task-list/__chechbox/__checkbox-wrapper.css">
+      rel="stylesheet"
+      href="body/__task-form/__task-form__button/__task-form__img.css"
+    />
+    <link rel="stylesheet" href="body/__task-list/__task-list.css" />
+    <link rel="stylesheet" href="body/__task-list/__content/__content.css" />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__content/__left-bar/__left-bar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__content/__right-bar/__right-bar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__content/_counter-wrapper/_counter-wrapper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__content/_wrapper-to-centre/_wrapper-to-centre.css"
+    />
+    <link rel="stylesheet" href="body/__task-list/__preview/__preview.css" />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__preview/__img-preview/__img-preview.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__preview/__task-list__text/__task-list__text.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__preview/__task-list__text/_thin-font.css"
+    />
+    <link
+      rel="stylesheet"
+      href="body/__task-list/__checkbox/__checkbox-wrapper.css"
+    />
+    <link rel="stylesheet" href="body/__task-list/__checkbox/__сheckbox.css" />
+  </head>
   <body>
     <header class="header">
       <img src="Src/Logo.svg" alt="Logo" class="header__logo" />
     </header>
     <form class="task-form">
-      <input type="text" class="task-form__input-text font" value="Add a new task" />
-      <button type="submit" class="task-form__button font">Add <img src="Src/plus.svg" alt="plus" class="task-form__img"></button>
+      <input
+        type="text"
+        class="task-form__input-text font"
+        value="Add a new task"
+      />
+      <button type="submit" class="task-form__button font">
+        Add <img src="Src/plus.svg" alt="plus" class="task-form__img" />
+      </button>
     </form>
     <form class="task-list">
-    <div class="task-list__content">
+      <div class="task-list__content">
         <div class="wrapper-left">
-      <span class="task-list__left-bar">Created tasks</span>
-      <span class="task-list__left-counter"><div class="task-list_counter-wrapper">0</div></span>
-    </div>
-    <div class="wrapper-right">
-      <span class="task-list__right-bar">Сompleted tasks</span>
-      <span class="task-list__right-counter"><div class="task-list_counter-wrapper">0</div></span>
-    </div>
-    </div>
+          <span class="task-list__left-bar">Created tasks</span>
+          <span class="task-list__left-counter"
+            ><div class="task-list_counter-wrapper">0</div></span
+          >
+        </div>
+        <div class="wrapper-right">
+          <span class="task-list__right-bar">Сompleted tasks</span>
+          <span class="task-list__right-counter"
+            ><div class="task-list_counter-wrapper">0</div></span
+          >
+        </div>
+      </div>
       <div class="task-list__preview">
-      <div class="task-list__preview-img">
-        <img
-          src="Src/Clipboard.svg"
-          alt="Clipboard"
-          class="task-list__img-preview"
-        />
+        <div class="task-list__preview-img">
+          <img
+            src="Src/Clipboard.svg"
+            alt="Clipboard"
+            class="task-list__img-preview"
+          />
+        </div>
+        <span class="task-list__text"
+          >You don't have any registered tasks yet <br />
+          <p
+            class="task-list__second-paragrah task-list__second-paragrah_thin-font"
+          >
+            Create tasks and organize your tasks
+          </p></span
+        >
       </div>
-        <span class="task-list__text">You don't have any registered tasks yet <br>
-            <p class="task-list__second-paragrah task-list__second-paragrah_thin-font">Create tasks and organize your tasks</p></span>
-      </div>
-      <div class="task-list__checkbox-wrapper task-list__wrapper_disable">
-        <input type="checkbox" class="task-list__checkbox" />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quae iure ex doloremque, voluptate quibusdam veritatis facilis reiciendis adipisci facere temporibus quis fuga ratione optio modi dolor atque laudantium cum?
-        <img src="Src/trash.svg" alt="trash" class="task-list__basket" />
-      </div>
+      <ul>
+        <li class="task-list__checkbox-wrapper task-list__wrapper_disable">
+          <label class="task-list__label">
+            <input type="checkbox" class="task-list__checkbox" />
+            <span class="task-list__custom-checkbox"></span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            quae iure ex doloremque, voluptate quibusdam veritatis facilis
+            reiciendis adipisci facere temporibus quis fuga ratione optio modi
+            dolor atque laudantium cum?
+          </label>
+          <img src="Src/trash.svg" alt="trash" class="task-list__basket" />
+        </li>
+      </ul>
     </form>
   </body>
 </html>
