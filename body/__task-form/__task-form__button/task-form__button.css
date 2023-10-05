@@ -10,4 +10,9 @@
   width: 90px;
   color: white;
   font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.task-form__button:hover {
+  background-color: rgb(39, 144, 204);
 }
