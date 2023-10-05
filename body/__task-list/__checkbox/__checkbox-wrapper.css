@@ -11,3 +11,9 @@
   align-items: flex-start;
   margin: 5px 10px;
 }
+
+@media only screen and (max-width: 320px) {
+  .task-list__checkbox-wrapper {
+    font-size: 0.7em;
+  }
+}
