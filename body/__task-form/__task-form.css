@@ -1,9 +1,9 @@
 .task-form {
   display: inline-flex;
   flex-direction: row;
-  position: absolute;
+  position: relative;
   left: 50%;
-  max-width: 738px;
+  max-width: 736px;
   width: 100%;
   transform: translate(-50%, -50%);
 }

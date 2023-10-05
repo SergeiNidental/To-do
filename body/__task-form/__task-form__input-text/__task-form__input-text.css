@@ -10,10 +10,15 @@
   color: rgba(128, 128, 128, 1);
   border-color: black;
   outline: 1px solid rgba(94, 96, 206, 0);
-  transition: outline 0.2s;
+  transition: outline 0.2s, background-color 0.3s;
+}
+
+.task-form__input-text:hover {
+  background-color: rgb(62, 62, 62);
 }
 
 .task-form__input-text:focus {
   color: white;
   outline: 1px solid rgba(94, 96, 206, 1);
+  background-color: rgba(38, 38, 38, 1);
 }
