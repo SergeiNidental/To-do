@@ -11,6 +11,7 @@
   color: white;
   font-weight: bold;
   transition: background-color 0.3s;
+  margin-right: 10px;
 }
 
 .task-form__button:hover {
