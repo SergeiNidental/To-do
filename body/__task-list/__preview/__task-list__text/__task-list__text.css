@@ -4,5 +4,12 @@
   color: rgba(128, 128, 128, 1);
   font-weight: bold;
   font-size: 1.3em;
-  line-height: 0.6;
+  line-height: 0.9;
+}
+
+@media only screen and (max-width: 320px) {
+  .task-list__text {
+    font-size: 0.8em;
+    padding: 1em 3em 3em 3em;
+  }
 }

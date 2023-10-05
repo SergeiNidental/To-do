@@ -1,3 +1,9 @@
 .task-list__right-bar {
   color: rgba(130, 132, 250, 1);
 }
+
+@media only screen and (max-width: 320px) {
+  .wrapper-right {
+    padding-top: 10px;
+  }
+}
