@@ -9,4 +9,11 @@
   background-color: rgba(38, 38, 38, 1);
   color: rgba(128, 128, 128, 1);
   border-color: black;
+  outline: 1px solid rgba(94, 96, 206, 0);
+  transition: outline 0.2s;
+}
+
+.task-form__input-text:focus {
+  color: white;
+  outline: 1px solid rgba(94, 96, 206, 1);
 }
