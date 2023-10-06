@@ -9,6 +9,7 @@
   flex-direction: row;
   line-height: 1.5;
   align-items: flex-start;
+  justify-content: space-between;
   margin: 5px 10px;
 }
 

@@ -25,7 +25,11 @@
   background-color: rgba(94, 96, 206, 1);
 }
 .task-list__label {
+  width: 100%;
   position: relative;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .task-list__checkbox:checked + .task-list__label .task-list__vector {
@@ -41,7 +45,8 @@
 }
 
 .task-list__trash {
-  width: 15%;
+  width: 24px;
+  height: 24px;
   margin-left: 2em;
   cursor: pointer;
   padding: 0.17em;
