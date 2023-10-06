@@ -1,10 +1,10 @@
 document.body.addEventListener("pointerdown", function (event) {
   if (!event.target.closest("form") && !event.target.closest("ul")) return;
 
-  if (event.target.tagName == "BUTTON") {
-    event.preventDefault();
+  if (event.target.closest("button")) {
     const inputAddNewTask = document.querySelector(".task-form__input-text");
     let textValueInput = inputAddNewTask.value;
+    inputAddNewTask.value = "";
     if (textValueInput == "") return;
 
     let previewWrapper = document.querySelector(".task-list__preview-wrapper");
@@ -14,7 +14,12 @@ document.body.addEventListener("pointerdown", function (event) {
     let newElement = createCheckbox(counter, textValueInput);
 
     let ulLastChild = document.body.querySelector("ul").lastChild;
-    ulLastChild.after(newElement);
+
+    if (ulLastChild == null) {
+      document.body.querySelector("ul").append(newElement);
+    } else {
+      ulLastChild.after(newElement);
+    }
   }
 });
 
