@@ -24,13 +24,16 @@ const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
-  entry: "./script.js",
+  entry: "./scripts/index.js",
   output: {
     filename: filename("js"),
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
     extensions: [".svg", ".js", ".css"],
+  },
+  stats: {
+    errorDetails: true,
   },
   optimization: optimization(),
   devServer: {
