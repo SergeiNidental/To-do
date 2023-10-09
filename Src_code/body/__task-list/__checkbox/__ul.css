@@ -1,7 +1,0 @@
-.task-list__ul {
-  display: flex;
-  flex-direction: column;
-  max-width: 736px;
-  width: 100%;
-  padding-inline-start: 0px;
-}

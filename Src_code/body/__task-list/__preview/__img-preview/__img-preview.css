@@ -1,9 +1,0 @@
-.task-list__img-preview {
-  height: 130%;
-}
-
-@media only screen and (max-width: 320px) {
-  .task-list__img-preview {
-    height: 60%;
-  }
-}

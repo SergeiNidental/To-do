@@ -22,7 +22,7 @@ const isProd = !isDev;
 const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
 
 module.exports = {
-  context: path.resolve(__dirname, "Src_code"),
+  context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: "./script.js",
   output: {
