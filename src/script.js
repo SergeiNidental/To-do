@@ -1,29 +1,11 @@
-import "./body/__body.css";
-import "./body/__header/__header.css";
-import "./body/__header/__logo/__logo.css";
-import "./body/__task-form/__task-form.css";
-import "./body/__task-form/__task-form__button/__task-form__img.css";
-import "./body/__task-form/__task-form__button/task-form__button.css";
-import "./body/__task-form/__task-form__input-text/__task-form__input-text.css";
-import "./body/__task-list/__task-list.css";
-import "./body/__task-list/__checkbox/__checkbox.css";
-import "./body/__task-list/__checkbox/__checkbox-wrapper.css";
-import "./body/__task-list/__checkbox/__ul.css";
-import "./body/__task-list/__content/__content.css";
-import "./body/__task-list/__content/__left-bar/__left-bar.css";
-import "./body/__task-list/__content/__right-bar/__right-bar.css";
-import "./body/__task-list/__content/_counter-wrapper/_counter-wrapper.css";
-import "./body/__task-list/__content/_wrapper-to-centre/_wrapper-to-centre.css";
-import "./body/__task-list/__preview/__preview.css";
-import "./body/__task-list/__preview/__img-preview/__img-preview.css";
-import "./body/__task-list/__preview/__task-list__text/__task-list__text.css";
-import "./body/__task-list/__preview/__task-list__text/_thin-font.css";
+import "./styles/__header/__header";
+import "./styles/__main/__main";
 
-import Logo from "./Src/Logo";
-import plus from "./Src/plus";
-import Clipboard from "./Src/Clipboard";
-import Vector from "./Src/Vector";
-import trash from "./Src/trash";
+import logo from "./img/logo";
+import plus from "./img/plus";
+import clipboard from "./img/clipboard";
+import vector from "./img/vector";
+import trash from "./img/trash";
 
 // document.querySelector(".task-form").innerHTML = JSON.parse(
 //   localStorage.getItem("task-form")
@@ -114,8 +96,8 @@ function createCheckbox(counter, textValueInput) {
   newElement.append(newLabel);
 
   let newVector = document.createElement("img");
-  newVector.setAttribute("src", "img/Vector.svg");
-  newVector.setAttribute("alt", "Vector");
+  newVector.setAttribute("src", "img/vector.svg");
+  newVector.setAttribute("alt", "vector");
   newVector.setAttribute("class", "task-list__vector");
   newElement.append(newVector);
 
