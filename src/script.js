@@ -1,5 +1,4 @@
-import "./styles/__header/__header";
-import "./styles/__main/__main";
+import "./styles/index";
 
 import logo from "./img/logo";
 import plus from "./img/plus";
