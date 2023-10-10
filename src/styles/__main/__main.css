@@ -301,7 +301,3 @@ body {
 .task-list__second-paragrah_thin-font {
   font-weight: 300;
 }
-
-.task-list__preview_disable {
-  display: none;
-}

@@ -10,18 +10,20 @@ import "./taskFormEventListener";
 import "./mainFormEventListener";
 import { createCheckbox } from "./taskFormEventListener";
 
-const localStorageDownloaded = JSON.parse(
-  localStorage.getItem("saveElementStates")
-);
-let saveElementStates = null;
+// const localStorageDownloaded = JSON.parse(
+//   localStorage.getItem("saveElementStates")
+// );
+// let saveElementStates = null;
 
-if (localStorageDownloaded.length >= 2) {
-  saveElementStates = localStorageDownloaded;
-  createDynamicElements(saveElementStates);
-} else {
-  saveElementStates = [{ leftCounter: 0 }, { rightCounter: 0 }];
-}
-
+// if (localStorageDownloaded.length > 2) {
+//   saveElementStates = localStorageDownloaded;
+//   const previewWrapper = document.querySelector(".task-list__preview-wrapper");
+//   previewWrapper.style.display = "none";
+//   createDynamicElements(saveElementStates);
+// } else {
+//   saveElementStates = [{ leftCounter: 0 }, { rightCounter: 0 }];
+// }
+let saveElementStates = [{ leftCounter: 0 }, { rightCounter: 0 }];
 export { saveElementStates };
 
 function createDynamicElements(saveElementStates) {

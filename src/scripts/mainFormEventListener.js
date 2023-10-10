@@ -16,7 +16,7 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
     event.target.classList.contains("task-list__checkbox")
   ) {
     completedTask(event.target, rightCounter);
-    changeState(event.target);
+    changeState(event.target, saveElementStates);
   }
 
   //deleting of checkbox
@@ -25,14 +25,14 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
       event.target,
       document.querySelector(".task-list__preview-wrapper")
     );
-    deletState(event.target);
+    deletState(event.target, saveElementStates);
     event.target.parentElement.remove();
   }
 
   //deleting of vector element
   if (event.target.classList.contains("task-list__vector")) {
     completedTask(event.target, rightCounter);
-    changeState(event.target);
+    changeState(event.target, saveElementStates);
     event.target.parentElement.querySelector(
       ".task-list__checkbox"
     ).checked = false;
