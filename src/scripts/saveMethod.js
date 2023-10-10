@@ -18,6 +18,10 @@ export function changeState(elem) {
   if (elem.tagName == "LABEL") {
     elem = elem.previousElementSibling;
   }
+
+  if (elem.tagName == "IMG") {
+    elem = elem.parentElement.firstElementChild;
+  }
   savedElementsFromLocalStorage.forEach((element) => {
     if (elem.id == element.chechboxId) {
       element.checkboxState = !elem.checked;

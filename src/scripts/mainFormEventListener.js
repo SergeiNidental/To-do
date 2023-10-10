@@ -32,10 +32,10 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
   //deleting of vector element
   if (event.target.classList.contains("task-list__vector")) {
     completedTask(event.target, rightCounter);
+    changeState(event.target);
     event.target.parentElement.querySelector(
       ".task-list__checkbox"
     ).checked = false;
-    // saveState();
   }
 });
 
