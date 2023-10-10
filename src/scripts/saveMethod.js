@@ -35,3 +35,24 @@ export function changeState(elem) {
     JSON.stringify(savedElementsFromLocalStorage)
   );
 }
+
+export function deletState(elem) {
+  const targetCheckbox = elem.parentElement.firstElementChild;
+  const savedElementsFromLocalStorage = JSON.parse(
+    localStorage.getItem("saveElementStates")
+  );
+  savedElementsFromLocalStorage.forEach((element, index) => {
+    if (targetCheckbox.id == element.chechboxId) {
+      savedElementsFromLocalStorage.splice(index, 1);
+    }
+  });
+  savedElementsFromLocalStorage[0].leftCounter -= 1;
+  savedElementsFromLocalStorage[1].rightCounter = document.querySelector(
+    ".task-list__right-counter > .task-list_counter-wrapper"
+  ).innerText;
+
+  localStorage.setItem(
+    "saveElementStates",
+    JSON.stringify(savedElementsFromLocalStorage)
+  );
+}

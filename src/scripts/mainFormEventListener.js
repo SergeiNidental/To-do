@@ -1,7 +1,7 @@
 import { saveNewState } from "./saveMethod";
 import { saveElementStates } from "./index";
 import { changeState } from "./saveMethod";
-
+import { deletState } from "./saveMethod";
 let counterCompletedTask = 0;
 
 const taskListCheckbox = document.body.querySelector(".task-list__ul");
@@ -25,8 +25,8 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
       event.target,
       document.querySelector(".task-list__preview-wrapper")
     );
+    deletState(event.target);
     event.target.parentElement.remove();
-    // saveState();
   }
 
   //deleting of vector element
