@@ -30,7 +30,7 @@ if (localStorageDownloaded != null) {
 } else {
   saveElementStates = [{ leftCounter: 0 }, { rightCounter: 0 }];
 }
-// let saveElementStates = [{ leftCounter: 0 }, { rightCounter: 0 }];
+
 export { saveElementStates };
 
 function createDynamicElements(saveElementStates) {

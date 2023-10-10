@@ -16,9 +16,6 @@ export function saveNewState(elem, saveElementStates) {
 }
 
 export function changeState(elem, saveElementStates) {
-  // const savedElementsFromLocalStorage = JSON.parse(
-  //   localStorage.getItem("saveElementStates")
-  // );
   if (elem.tagName == "LABEL") {
     elem = elem.previousElementSibling;
   }
