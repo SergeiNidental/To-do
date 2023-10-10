@@ -38,7 +38,7 @@ taskForm.addEventListener("pointerdown", function (event) {
   }
 });
 
-function createCheckbox(counter, textValueInput) {
+export function createCheckbox(counter, textValueInput, state) {
   const newElement = document.createElement("li");
   newElement.setAttribute("class", "task-list__checkbox-wrapper");
 
@@ -46,6 +46,9 @@ function createCheckbox(counter, textValueInput) {
   newInput.setAttribute("type", "checkbox");
   newInput.setAttribute("id", `checkbox${counter}`);
   newInput.setAttribute("class", "task-list__checkbox");
+  if (state) {
+    newInput.checked = state;
+  }
   newElement.append(newInput);
 
   const newLabel = document.createElement("label");
