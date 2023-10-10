@@ -38,7 +38,14 @@ taskForm.addEventListener("pointerdown", function (event) {
   }
 });
 
-export function createCheckbox(counter, textValueInput, state) {
+export function createCheckbox(
+  counter,
+  textValueInput,
+  state,
+  styleCheckbox,
+  styleLabel,
+  styleVector
+) {
   const newElement = document.createElement("li");
   newElement.setAttribute("class", "task-list__checkbox-wrapper");
 
@@ -46,8 +53,10 @@ export function createCheckbox(counter, textValueInput, state) {
   newInput.setAttribute("type", "checkbox");
   newInput.setAttribute("id", `checkbox${counter}`);
   newInput.setAttribute("class", "task-list__checkbox");
-  if (state) {
+
+  if (state && styleCheckbox) {
     newInput.checked = state;
+    newInput.style = styleCheckbox;
   }
   newElement.append(newInput);
 
@@ -55,12 +64,18 @@ export function createCheckbox(counter, textValueInput, state) {
   newLabel.setAttribute("for", `checkbox${counter}`);
   newLabel.setAttribute("class", "task-list__label");
   newLabel.innerHTML = textValueInput;
+  if (styleLabel) {
+    newLabel.style = styleLabel;
+  }
   newElement.append(newLabel);
 
   const newVector = document.createElement("img");
   newVector.setAttribute("src", "./img/vector.svg");
   newVector.setAttribute("alt", "vector");
   newVector.setAttribute("class", "task-list__vector");
+  if (styleVector) {
+    newVector.style = styleVector;
+  }
   newElement.append(newVector);
 
   const newTrash = document.createElement("img");

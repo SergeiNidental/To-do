@@ -3,11 +3,10 @@ export function saveNewState(elem, saveElementStates) {
   newElement.text = elem.innerText;
   newElement.checkboxState = elem.firstElementChild.checked;
   newElement.chechboxId = elem.firstElementChild.id;
-  newElement.classListCheckbox = elem.firstElementChild.classList;
-  newElement.classListLabel =
-    elem.firstElementChild.nextElementSibling.classList;
-  newElement.classListVector =
-    elem.firstElementChild.nextElementSibling.nextElementSibling.classList;
+  newElement.styleCheckbox = elem.firstElementChild.style;
+  newElement.styleLabel = elem.firstElementChild.nextElementSibling.style;
+  newElement.styleVector =
+    elem.firstElementChild.nextElementSibling.nextElementSibling.style;
   saveElementStates.push(newElement);
   saveElementStates[0].leftCounter = document.body.querySelector(
     ".task-list__left-counter > .task-list_counter-wrapper"
@@ -30,23 +29,20 @@ export function changeState(elem, saveElementStates) {
   saveElementStates.forEach((element) => {
     if (elem.id == element.chechboxId) {
       element.checkboxState = !elem.checked;
-      element.classListCheckbox = elem.classList;
-      element.classListLabel = elem.nextElementSibling.classList;
-      element.classListVector =
-        elem.nextElementSibling.nextElementSibling.classList;
+      element.styleCheckbox = elem.style;
+      element.styleLabel = elem.nextElementSibling.style;
+      element.styleVector = elem.nextElementSibling.nextElementSibling.style;
     }
   });
   saveElementStates[1].rightCounter = document.body.querySelector(
     ".task-list__right-counter > .task-list_counter-wrapper"
   ).innerText;
-  localStorage.setItem("saveElementStates", JSON.stringify(sa));
+  localStorage.setItem("saveElementStates", JSON.stringify(saveElementStates));
 }
 
 export function deletState(elem, saveElementStates) {
   const targetCheckbox = elem.parentElement.firstElementChild;
-  // const savedElementsFromLocalStorage = JSON.parse(
-  //   localStorage.getItem("saveElementStates")
-  // );
+
   saveElementStates.forEach((element, index) => {
     if (targetCheckbox.id == element.chechboxId) {
       saveElementStates.splice(index, 1);
@@ -56,6 +52,6 @@ export function deletState(elem, saveElementStates) {
   saveElementStates[1].rightCounter = document.querySelector(
     ".task-list__right-counter > .task-list_counter-wrapper"
   ).innerText;
-  // console.log(saveElementStates);
+
   localStorage.setItem("saveElementStates", JSON.stringify(saveElementStates));
 }

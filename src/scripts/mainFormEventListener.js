@@ -2,7 +2,13 @@ import { saveNewState } from "./saveMethod";
 import { saveElementStates } from "./index";
 import { changeState } from "./saveMethod";
 import { deletState } from "./saveMethod";
+let localStorageDownloaded = JSON.parse(
+  localStorage.getItem("saveElementStates")
+);
 let counterCompletedTask = 0;
+if (localStorageDownloaded != null) {
+  counterCompletedTask = +localStorageDownloaded[1].rightCounter;
+}
 
 const taskListCheckbox = document.body.querySelector(".task-list__ul");
 
