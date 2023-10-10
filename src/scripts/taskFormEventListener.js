@@ -1,5 +1,5 @@
-import saveState from "./saveMethod";
-
+import { saveNewState } from "./saveMethod";
+import { saveElementStates } from "./index";
 const taskForm = document.body.querySelector(".task-form");
 
 taskForm.addEventListener("pointerdown", function (event) {
@@ -34,7 +34,7 @@ taskForm.addEventListener("pointerdown", function (event) {
     } else {
       ulLastChild.after(newElement);
     }
-    saveState();
+    saveNewState(newElement, saveElementStates);
   }
 });
 

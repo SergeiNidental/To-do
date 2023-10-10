@@ -1,4 +1,6 @@
-import "./saveMethod";
+import { saveNewState } from "./saveMethod";
+import { saveElementStates } from "./index";
+import { changeState } from "./saveMethod";
 
 let counterCompletedTask = 0;
 
@@ -14,7 +16,7 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
     event.target.classList.contains("task-list__checkbox")
   ) {
     completedTask(event.target, rightCounter);
-    saveState();
+    changeState(event.target);
   }
 
   //deleting of checkbox
@@ -24,7 +26,7 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
       document.querySelector(".task-list__preview-wrapper")
     );
     event.target.parentElement.remove();
-    saveState();
+    // saveState();
   }
 
   //deleting of vector element
@@ -33,7 +35,7 @@ taskListCheckbox.addEventListener("pointerdown", function (event) {
     event.target.parentElement.querySelector(
       ".task-list__checkbox"
     ).checked = false;
-    saveState();
+    // saveState();
   }
 });
 

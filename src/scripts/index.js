@@ -1,10 +1,3 @@
-// document.querySelector(".task-form").innerHTML = JSON.parse(
-//   localStorage.getItem("task-form")
-// );
-// document.querySelector(".task-list").innerHTML = JSON.parse(
-//   localStorage.getItem("task-list")
-// );
-
 import "../styles/index";
 
 import logo from "../img/logo";
@@ -15,3 +8,12 @@ import trash from "../img/trash";
 
 import "./taskFormEventListener";
 import "./mainFormEventListener";
+
+export const saveElementStates = [{ leftCounter: 0 }, { rightCounter: 0 }];
+
+// document.querySelector(".task-form").innerHTML = JSON.parse(
+//   localStorage.getItem("task-form")
+// );
+// document.querySelector(".task-list").innerHTML = JSON.parse(
+//   localStorage.getItem("task-list")
+// );
