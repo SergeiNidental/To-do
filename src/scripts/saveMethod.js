@@ -20,10 +20,10 @@ export function changeState(elem) {
   }
   savedElementsFromLocalStorage.forEach((element) => {
     if (elem.id == element.chechboxId) {
-      element.checkboxState = elem.checked;
+      element.checkboxState = !elem.checked;
     }
   });
-  savedElementsFromLocalStorage[1] = document.body.querySelector(
+  savedElementsFromLocalStorage[1].rightCounter = document.body.querySelector(
     ".task-list__right-counter > .task-list_counter-wrapper"
   ).innerText;
   localStorage.setItem(
