@@ -30,7 +30,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: [".svg", ".js", ".css"],
+    extensions: [".svg", ".js", ".css", ".jsx"],
   },
   stats: {
     errorDetails: true,
@@ -76,6 +76,26 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.jsx$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
+        },
       },
     ],
   },
