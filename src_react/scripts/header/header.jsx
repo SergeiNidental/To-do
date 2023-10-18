@@ -1,9 +1,9 @@
 import React, { StrictMode } from "react";
 
-export default function Header() {
-  return (
-    <header className="header">
-      <img src="img/logo.svg" alt="Logo" className="header__logo" />
-    </header>
-  );
+export function Header(props) {
+  return <header className={props.className}>{props.children}</header>;
+}
+
+export function Img(props) {
+  return <img src={props.src} alt={props.alt} className={props.className} />;
 }
