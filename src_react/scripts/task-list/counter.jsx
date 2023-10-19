@@ -30,7 +30,7 @@ function Bar(props) {
   );
 }
 
-function Span(props) {
+export function Span(props) {
   if (props.children) {
     return <span className={props.className}>{props.children}</span>;
   } else {
