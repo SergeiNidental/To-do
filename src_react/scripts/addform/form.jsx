@@ -2,16 +2,12 @@ import React, { StrictMode } from "react";
 import { useState } from "react";
 
 export function Form(props) {
-  const [Ulist, setUlist] = useState([]);
-
-  return <form className={props.className} {...Ulist, setUlist}>{props.children}</form>;
+  return <form className={props.className}>{props.children}</form>;
 }
 
 export function Input(props) {
-  const [inputState, setInputState] = useState("");
-
   function handleOnChange(e) {
-    setInputState(e.target.value);
+    props.setInputState(e.target.value);
   }
 
   return (
@@ -20,14 +16,22 @@ export function Input(props) {
       className={props.className}
       placeholder={props.placeholder}
       onChange={handleOnChange}
-      value={inputState}
+      value={props.inputState}
     />
   );
 }
 
 export function Button(props) {
+  function handleClick(e) {
+    props.setUList([...props.uList, props.inputState]);
+  }
+
   return (
-    <button type={props.type} className={props.className}>
+    <button
+      type={props.type}
+      className={props.className}
+      onPointerDown={handleClick}
+    >
       Add {props.children}
     </button>
   );
