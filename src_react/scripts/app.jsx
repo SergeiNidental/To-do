@@ -1,6 +1,7 @@
 import React, { Children, StrictMode } from "react";
 import { Header, Img } from "./header/header";
 import { Form, Input, Button } from "./addform/form";
+import Counter from "./task-list/counter";
 
 export default function App() {
   return (
@@ -21,6 +22,9 @@ export default function App() {
             className="task-form__img"
           />
         </Button>
+      </Form>
+      <Form className="task-list">
+        <Counter className="task-list__content" />
       </Form>
     </>
   );
