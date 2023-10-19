@@ -3,6 +3,8 @@ import { Header, Img } from "./header/header";
 import { Form, Input, Button } from "./addform/form";
 import Counter from "./task-list/counter";
 import Preview from "./task-list/preview";
+import Ulist from "./task-list/ulist";
+import "../../src/fonts/Inter-VariableFont_slnt_wght.ttf";
 
 export default function App() {
   return (
@@ -31,6 +33,7 @@ export default function App() {
           classNameWrapper="task-list__preview-wrapper"
           classNameImgWrapper="task-list__preview-img"
         />
+        <Ulist className="task-list__ul" />
       </Form>
     </>
   );
