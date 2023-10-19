@@ -39,7 +39,7 @@ export default function App() {
         </Button>
       </Form>
       <Form className="task-list">
-        <Counter className="task-list__content" />
+        <Counter className="task-list__content" uList={uList} />
         <Preview
           className="task-list__preview"
           classNameWrapper="task-list__preview-wrapper"

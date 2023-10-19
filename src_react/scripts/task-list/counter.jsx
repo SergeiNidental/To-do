@@ -8,6 +8,7 @@ export default function Counter(props) {
         classFirstSpan="task-list__left-bar"
         classSecondSpan="task-list__left-counter"
         classCounterNumber="task-list_counter-wrapper"
+        uList={props.uList}
       />
       <Bar
         className="wrapper-right"
@@ -24,7 +25,10 @@ function Bar(props) {
     <div className={props.className}>
       <Span className={props.classFirstSpan} value="Created tasks" />
       <Span className={props.classSecondSpan}>
-        <CounterNumber className={props.classCounterNumber} />
+        <CounterNumber
+          className={props.classCounterNumber}
+          uList={props.uList}
+        />
       </Span>
     </div>
   );
@@ -39,5 +43,9 @@ export function Span(props) {
 }
 
 function CounterNumber(props) {
-  return <div className={props.className}>0</div>;
+  return (
+    <div className={props.className}>
+      {props.uList ? props.uList.length : 0}
+    </div>
+  );
 }
