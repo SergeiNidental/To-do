@@ -22,8 +22,13 @@ export function Input(props) {
 }
 
 export function Button(props) {
-  function handleClick(e) {
-    props.setUList([...props.uList, props.inputState]);
+  function handleClick() {
+    const uListKey = props.uList.length + 1;
+    props.setUList([
+      ...props.uList,
+      { key: uListKey, value: props.inputState },
+    ]);
+    props.setInputState("");
   }
 
   return (

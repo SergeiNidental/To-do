@@ -3,40 +3,33 @@ import { Img } from "../header/header";
 import { Input } from "../addform/form";
 import { useState } from "react";
 
-export default function Ulist(props) {
-  return (
-    <ul className={props.className}>
-      <Task />
-    </ul>
-  );
-}
-
-function Task() {
-  return (
-    <li className="task-list__checkbox-wrapper">
+export default function Task(props) {
+  const uListLength = props.uList.length;
+  if (uListLength == 0) return null;
+  const taskList = props.uList.map((e) => (
+    <li className={props.liClass} key={e.key}>
       <Input
         type="checkbox"
-        // id={"checkbox" + liLength}
-        className="task-list__checkbox"
+        id={"checkbox" + uListLength}
+        className={props.inputClass}
       />
-      <Label htmlFor="checkbox1" className="task-list__label">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, quae
-        iure ex doloremque, voluptate quibusdam veritatis facilis reiciendis
-        adipisci facere temporibus quis fuga ratione optio modi dolor atque
-        laudantium cum?
+      <Label htmlFor={"checkbox" + uListLength} className={props.labelClass}>
+        {e.value}
       </Label>
       <Img
         src="../src/img/vector.svg"
         alt="vector"
-        className="task-list__vector"
+        className={props.vectorClass}
       />
       <Img
         src="../src/img/trash.svg"
         alt="trash"
-        className="task-list__trash"
+        className={props.trashClass}
       />
     </li>
-  );
+  ));
+
+  return <ul className={props.className}>{taskList}</ul>;
 }
 
 function Label(props) {

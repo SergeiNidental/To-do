@@ -3,7 +3,7 @@ import { Header, Img } from "./header/header";
 import { Form, Input, Button } from "./addform/form";
 import Counter from "./task-list/counter";
 import Preview from "./task-list/preview";
-import Ulist from "./task-list/ulist";
+import Task from "./task-list/ulist";
 import "../../src/fonts/Inter-VariableFont_slnt_wght.ttf";
 import { useState } from "react";
 
@@ -30,6 +30,7 @@ export default function App() {
           uList={uList}
           setUList={setUList}
           inputState={inputState}
+          setInputState={setInputState}
         >
           <Img
             src="../src/img/plus.svg"
@@ -46,7 +47,16 @@ export default function App() {
           classNameImgWrapper="task-list__preview-img"
           uList={uList}
         />
-        <Ulist className="task-list__ul" />
+        <Task
+          className="task-list__ul"
+          liClass="task-list__checkbox-wrapper"
+          inputClass="task-list__checkbox"
+          labelClass="task-list__label"
+          vectorClass="task-list__vector"
+          trashClass="task-list__trash"
+          uList={uList}
+          setUList={setUList}
+        />
       </Form>
     </>
   );
