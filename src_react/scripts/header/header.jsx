@@ -5,7 +5,16 @@ export function Header(props) {
 }
 
 export function Img(props) {
-  if (props.onPointerDown) {
+  if (props.alt == "vector") {
+    return (
+      <img
+        src={props.src}
+        alt={props.alt}
+        className={props.className}
+        onPointerDown={props.onChangeClass}
+      />
+    );
+  } else if (props.alt == "trash") {
     return (
       <img
         src={props.src}

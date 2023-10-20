@@ -26,6 +26,7 @@ export default function Task(props) {
         src="../src/img/vector.svg"
         alt="vector"
         className={props.vectorClass}
+        onChangeClass={() => handleLabelClick(e, props.uList, props.setUList)}
       />
       <Img
         src="../src/img/trash.svg"
