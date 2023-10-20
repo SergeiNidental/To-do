@@ -4,11 +4,11 @@ import { Span } from "../task-list/counter";
 
 export default function Preview(props) {
   return (
-    <div
-      className={props.className}
-      style={{ display: props.uList.length > 0 ? "none" : "flex" }}
-    >
-      <div className={props.classNameWrapper}>
+    <div className={props.className}>
+      <div
+        className={props.classNameWrapper}
+        style={{ display: props.uList.length > 0 ? "none" : "flex" }}
+      >
         <div className={props.classNameImgWrapper}>
           <Img
             src="../src/img/clipboard.svg"
