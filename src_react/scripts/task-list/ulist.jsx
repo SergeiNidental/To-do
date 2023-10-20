@@ -19,11 +19,7 @@ export default function Task(props) {
             handleLabelClick(e, props.uList, props.setUList)
           }
         />
-        <Label
-          htmlFor={"checkbox" + firstId}
-          className={props.labelClass}
-          onPointerDown={() => handleLabelClick(e, props.uList, props.setUList)}
-        >
+        <Label htmlFor={"checkbox" + firstId} className={props.labelClass}>
           {e.value}
         </Label>
         <Img
@@ -49,11 +45,7 @@ export default function Task(props) {
 
 function Label(props) {
   return (
-    <label
-      htmlFor={props.htmlFor}
-      className={props.className}
-      onPointerDown={props.onPointerDown}
-    >
+    <label htmlFor={props.htmlFor} className={props.className}>
       {props.children}
     </label>
   );
