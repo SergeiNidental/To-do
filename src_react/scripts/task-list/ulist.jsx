@@ -1,7 +1,6 @@
-import React, { Children, StrictMode } from "react";
+import React from "react";
 import { Img } from "../header/header";
 import { Input } from "../addform/form";
-import { useState } from "react";
 
 export default function Task(props) {
   const uListLength = props.uList.length;

@@ -1,4 +1,4 @@
-import React, { Children, StrictMode } from "react";
+import React from "react";
 import { Header, Img } from "./header/header";
 import { Form, Input, Button } from "./addform/form";
 import Counter from "./task-list/counter";
@@ -6,10 +6,27 @@ import Preview from "./task-list/preview";
 import Task from "./task-list/ulist";
 import "../../src/fonts/Inter-VariableFont_slnt_wght.ttf";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function App() {
   const [uList, setUList] = useState([]);
   const [inputState, setInputState] = useState("");
+
+  useEffect(() => {
+    const uListstored = JSON.parse(localStorage.getItem("uList"));
+    const inputStatestored = JSON.parse(localStorage.getItem("inputState"));
+    if (uListstored && uListstored.length > 0) {
+      setUList(uListstored);
+    }
+    if (inputStatestored && inputStatestored !== "") {
+      setInputState(inputStatestored);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("uList", JSON.stringify(uList));
+    localStorage.setItem("inputState", JSON.stringify(inputState));
+  }, [uList, inputState]);
 
   return (
     <>

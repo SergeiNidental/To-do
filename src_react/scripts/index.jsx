@@ -7,6 +7,7 @@ import plus from "../../src/img/plus";
 import clipboard from "../../src/img/clipboard";
 
 const root = createRoot(document.getElementById("root"));
+
 root.render(
   <StrictMode>
     <App />

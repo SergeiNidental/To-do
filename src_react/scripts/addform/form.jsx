@@ -1,5 +1,4 @@
-import React, { StrictMode } from "react";
-import { useState } from "react";
+import React from "react";
 
 export function Form(props) {
   return <form className={props.className}>{props.children}</form>;
