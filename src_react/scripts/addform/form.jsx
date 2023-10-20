@@ -11,7 +11,13 @@ export function Input(props) {
   }
   if (props.id) {
     return (
-      <input type={props.type} className={props.className} id={props.id} />
+      <input
+        type={props.type}
+        className={props.className}
+        id={props.id}
+        checked={props.checked}
+        onPointerDown={props.onPointerDown}
+      />
     );
   } else {
     return (
@@ -31,7 +37,7 @@ export function Button(props) {
     const uListKey = props.uList.length + 1;
     props.setUList([
       ...props.uList,
-      { key: uListKey, id: uListKey, value: props.inputState },
+      { key: uListKey, id: uListKey, value: props.inputState, checked: false },
     ]);
     props.setInputState("");
   }

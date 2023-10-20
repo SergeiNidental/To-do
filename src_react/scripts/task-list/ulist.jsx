@@ -12,8 +12,14 @@ export default function Task(props) {
         type="checkbox"
         id={"checkbox" + uListLength}
         className={props.inputClass}
+        checked={e.checked}
+        onPointerDown={() => handleLabelClick(e, props.uList, props.setUList)}
       />
-      <Label htmlFor={"checkbox" + uListLength} className={props.labelClass}>
+      <Label
+        htmlFor={"checkbox" + uListLength}
+        className={props.labelClass}
+        onPointerDown={() => handleLabelClick(e, props.uList, props.setUList)}
+      >
         {e.value}
       </Label>
       <Img
@@ -27,7 +33,6 @@ export default function Task(props) {
         className={props.trashClass}
         onPointerDown={() => {
           props.setUList(props.uList.filter((object) => object.id !== e.id));
-          console.log(props.uList);
         }}
       />
     </li>
@@ -38,8 +43,23 @@ export default function Task(props) {
 
 function Label(props) {
   return (
-    <label htmlFor={props.htmlFor} className={props.className}>
+    <label
+      htmlFor={props.htmlFor}
+      className={props.className}
+      onPointerDown={props.onPointerDown}
+    >
       {props.children}
     </label>
   );
+}
+
+function handleLabelClick(elem, list, setList) {
+  const updatedList = list.map((item) => {
+    if (item.id === elem.id) {
+      return { ...item, checked: !elem.checked };
+    }
+    return item;
+  });
+
+  setList(updatedList);
 }
