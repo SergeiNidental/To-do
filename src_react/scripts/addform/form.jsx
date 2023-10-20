@@ -9,16 +9,21 @@ export function Input(props) {
   function handleOnChange(e) {
     props.setInputState(e.target.value);
   }
-
-  return (
-    <input
-      type={props.type}
-      className={props.className}
-      placeholder={props.placeholder}
-      onChange={handleOnChange}
-      value={props.inputState}
-    />
-  );
+  if (props.id) {
+    return (
+      <input type={props.type} className={props.className} id={props.id} />
+    );
+  } else {
+    return (
+      <input
+        type={props.type}
+        className={props.className}
+        placeholder={props.placeholder}
+        onChange={handleOnChange}
+        value={props.inputState}
+      />
+    );
+  }
 }
 
 export function Button(props) {
@@ -26,7 +31,7 @@ export function Button(props) {
     const uListKey = props.uList.length + 1;
     props.setUList([
       ...props.uList,
-      { key: uListKey, value: props.inputState },
+      { key: uListKey, id: uListKey, value: props.inputState },
     ]);
     props.setInputState("");
   }

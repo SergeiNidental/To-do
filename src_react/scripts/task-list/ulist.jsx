@@ -25,6 +25,10 @@ export default function Task(props) {
         src="../src/img/trash.svg"
         alt="trash"
         className={props.trashClass}
+        onPointerDown={() => {
+          props.setUList(props.uList.filter((object) => object.id !== e.id));
+          console.log(props.uList);
+        }}
       />
     </li>
   ));

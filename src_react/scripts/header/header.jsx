@@ -5,5 +5,16 @@ export function Header(props) {
 }
 
 export function Img(props) {
-  return <img src={props.src} alt={props.alt} className={props.className} />;
+  if (props.onPointerDown) {
+    return (
+      <img
+        src={props.src}
+        alt={props.alt}
+        className={props.className}
+        onPointerDown={props.onPointerDown}
+      />
+    );
+  } else {
+    return <img src={props.src} alt={props.alt} className={props.className} />;
+  }
 }
