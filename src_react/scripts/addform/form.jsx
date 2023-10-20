@@ -5,9 +5,6 @@ export function Form(props) {
 }
 
 export function Input(props) {
-  function handleOnChange(e) {
-    props.setInputState(e.target.value);
-  }
   if (props.id) {
     return (
       <input
@@ -15,7 +12,7 @@ export function Input(props) {
         className={props.className}
         id={props.id}
         checked={props.checked}
-        onPointerDown={props.onPointerDown}
+        onChange={props.onChangeCheckbox}
       />
     );
   } else {
@@ -24,7 +21,7 @@ export function Input(props) {
         type={props.type}
         className={props.className}
         placeholder={props.placeholder}
-        onChange={handleOnChange}
+        onChange={props.onChangeLine}
         value={props.inputState}
       />
     );

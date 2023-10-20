@@ -40,6 +40,7 @@ export default function App() {
           placeholder="Add a new task"
           inputState={inputState}
           setInputState={setInputState}
+          onChangeLine={(e) => setInputState(e.target.value)}
         />
         <Button
           type="button"
