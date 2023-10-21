@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
+
 import { Header, Img } from "./header/header";
 import { Form, Input, Button } from "./addform/form";
 import Counter from "./task-list/counter";
 import Preview from "./task-list/preview";
 import Task from "./task-list/ulist";
-import "../../src/fonts/Inter-VariableFont_slnt_wght.ttf";
-import { useState } from "react";
-import { useEffect } from "react";
 
 export default function App() {
   const [uList, setUList] = useState([]);
@@ -28,6 +26,12 @@ export default function App() {
     localStorage.setItem("inputState", JSON.stringify(inputState));
   }, [uList, inputState]);
 
+  const handleOnChangeLine = useCallback(
+    (e) => {
+      setInputState(e.target.value);
+    },
+    [inputState]
+  );
   return (
     <>
       <Header className="header">
@@ -40,7 +44,7 @@ export default function App() {
           placeholder="Add a new task"
           inputState={inputState}
           setInputState={setInputState}
-          onChangeLine={(e) => setInputState(e.target.value)}
+          onChangeLine={handleOnChangeLine} // TODO: USECALLBACK done
         />
         <Button
           type="button"

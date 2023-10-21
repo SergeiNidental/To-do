@@ -1,6 +1,7 @@
 import React from "react";
 
 export function Form(props) {
+  // TODO: COMPONENT TO SEPARATE FOLDER AND FILE
   return <form className={props.className}>{props.children}</form>;
 }
 
@@ -28,23 +29,30 @@ export function Input(props) {
   }
 }
 
-export function Button(props) {
+export function Button({
+  type,
+  className,
+  uList,
+  setUList,
+  inputState,
+  setInputState,
+  children,
+}) {
+  // TODO: DESCRTRUCURE {....}
   function handleClick() {
-    const uListKey = props.uList.length + 1;
-    props.setUList([
-      ...props.uList,
-      { key: uListKey, id: uListKey, value: props.inputState, checked: false },
+    const uListKey = uList.length + 1;
+
+    setUList([
+      ...uList,
+      { key: uListKey, id: uListKey, value: inputState, checked: false },
     ]);
-    props.setInputState("");
+
+    setInputState("");
   }
 
   return (
-    <button
-      type={props.type}
-      className={props.className}
-      onPointerDown={handleClick}
-    >
-      Add {props.children}
+    <button type={type} className={className} onPointerDown={handleClick}>
+      Add {children}
     </button>
   );
 }

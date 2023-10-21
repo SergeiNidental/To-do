@@ -5,25 +5,22 @@ export function Header(props) {
 }
 
 export function Img(props) {
-  if (props.alt == "vector") {
-    return (
-      <img
-        src={props.src}
-        alt={props.alt}
-        className={props.className}
-        onPointerDown={props.onChangeClass}
-      />
-    );
-  } else if (props.alt == "trash") {
-    return (
-      <img
-        src={props.src}
-        alt={props.alt}
-        className={props.className}
-        onPointerDown={props.onPointerDown}
-      />
-    );
-  } else {
-    return <img src={props.src} alt={props.alt} className={props.className} />;
+  let onPointerDown;
+
+  if (props.alt === "vector") {
+    onPointerDown = props.onChangeClass;
   }
+
+  if (props.alt === "trash") {
+    onPointerDown = props.onPointerDown;
+  }
+
+  return (
+    <img
+      src={props.src}
+      alt={props.alt}
+      className={props.className}
+      onPointerDown={onPointerDown}
+    />
+  );
 }

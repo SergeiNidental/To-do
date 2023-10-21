@@ -1,17 +1,20 @@
-import React, { Children, StrictMode } from "react";
+import React from "react"; // TODO: che za import done
+
 import { Img } from "../header/header";
 import { Span } from "../task-list/counter";
+
+import clipboard from "../../../src/img/clipboard";
 
 export default function Preview(props) {
   return (
     <div className={props.className}>
       <div
         className={props.classNameWrapper}
-        style={{ display: props.uList.length > 0 ? "none" : "flex" }}
+        style={{ display: props.uList.length > 0 ? "none" : "flex" }} // TODO huynya, delay modificatorom, use classNames
       >
         <div className={props.classNameImgWrapper}>
           <Img
-            src="../src/img/clipboard.svg"
+            src={clipboard} // TODO: import inline
             alt="clipboard"
             className="task-list__img-preview"
           />
