@@ -43,7 +43,7 @@ export default function App() {
       <Header>
         <Img src={logo} alt="logo" className="header__logo" />
       </Header>
-      <Form className="task-form">
+      <Form isQuestForm={true}>
         <Input
           type="text"
           className="task-form__input-text font"
@@ -63,7 +63,7 @@ export default function App() {
           <Img src={plus} alt="plus" className="task-form__img" />
         </Button>
       </Form>
-      <Form className="task-list">
+      <Form isQuestForm={false}>
         <Counter className="task-list__content" uList={uList} />
         <Preview
           className="task-list__preview"

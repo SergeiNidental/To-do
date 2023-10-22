@@ -10,17 +10,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* task-form */
-.task-form {
-  display: inline-flex;
-  flex-direction: row;
-  position: relative;
-  left: 50%;
-  max-width: 736px;
-  width: 100%;
-  transform: translate(-50%, -50%);
-}
-
 /* __task-form__button */
 .task-form__button {
   display: flex;
@@ -70,17 +59,6 @@ body {
   color: white;
   outline: 1px solid rgba(94, 96, 206, 1);
   background-color: rgba(38, 38, 38, 1);
-}
-/* __task-list */
-.task-list {
-  background-color: rgba(26, 26, 26, 1);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 6em;
-  margin-top: -55px;
 }
 
 /* __checkbox */
