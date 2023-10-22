@@ -1,0 +1,38 @@
+.header__logo {
+  height: auto;
+}
+
+.task-form__img {
+  margin-left: 8px;
+}
+
+.task-list__vector {
+  display: none;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 1.9em;
+  top: 1.9em;
+}
+
+@media only screen and (max-width: 320px) {
+  .task-list__vector {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.task-list__trash {
+  width: 24px;
+  height: 24px;
+  margin-left: 2em;
+  cursor: pointer;
+  padding: 0.17em;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.task-list__trash:hover {
+  background-color: rgb(52, 51, 51);
+}

@@ -30,9 +30,6 @@ body {
 .task-form__button:hover {
   background-color: rgb(39, 144, 204);
 }
-.task-form__img {
-  margin-left: 8px;
-}
 
 /* __checkbox */
 
@@ -60,43 +57,12 @@ body {
 }
 /* __checkbox */
 
-.task-list__vector {
-  display: none;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  left: 1.9em;
-  top: 1.9em;
-}
-
 .task-list__label {
   position: relative;
   width: 100%;
   overflow: hidden;
   white-space: normal;
   word-wrap: break-word;
-}
-
-.task-list__trash {
-  width: 24px;
-  height: 24px;
-  margin-left: 2em;
-  cursor: pointer;
-  padding: 0.17em;
-  border-radius: 5px;
-  background-color: transparent;
-  transition: background-color 0.3s;
-}
-
-.task-list__trash:hover {
-  background-color: rgb(52, 51, 51);
-}
-
-@media only screen and (max-width: 320px) {
-  .task-list__vector {
-    width: 10px;
-    height: 10px;
-  }
 }
 
 /* __ul */

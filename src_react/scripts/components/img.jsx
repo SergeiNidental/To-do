@@ -1,20 +1,26 @@
 import React from "react";
 
-export default function Img({
-  src,
-  alt,
-  className,
-  onChangeClass,
-  onPointerDown,
-}) {
+import "../../../src/styles/components/__img";
+
+export default function Img({ src, alt, onChangeClass, onPointerDown }) {
   let PointerDown;
+  let className;
 
-  if (alt === "vector") {
-    PointerDown = onChangeClass;
-  }
-
-  if (alt === "trash") {
-    PointerDown = onPointerDown;
+  switch (alt) {
+    case "logo":
+      className = "header__logo";
+      break;
+    case "plus":
+      className = "task-form__img";
+      break;
+    case "vector":
+      className = "task-list__vector";
+      PointerDown = onChangeClass;
+      break;
+    case "trash":
+      className = "task-list__trash";
+      PointerDown = onPointerDown;
+      break;
   }
 
   return (

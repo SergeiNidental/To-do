@@ -41,7 +41,7 @@ export default function App() {
   return (
     <>
       <Header>
-        <Img src={logo} alt="logo" className="header__logo" />
+        <Img src={logo} alt="logo" />
       </Header>
       <Form isQuestForm={true}>
         <Input
@@ -59,7 +59,7 @@ export default function App() {
           inputState={inputState}
           setInputState={setInputState}
         >
-          <Img src={plus} alt="plus" className="task-form__img" />
+          <Img src={plus} alt="plus" />
         </Button>
       </Form>
       <Form isQuestForm={false}>
@@ -74,8 +74,6 @@ export default function App() {
           className="task-list__ul"
           liClass="task-list__checkbox-wrapper"
           labelClass="task-list__label"
-          vectorClass="task-list__vector"
-          trashClass="task-list__trash"
           uList={uList}
           setUList={setUList}
         />
