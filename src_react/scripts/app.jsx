@@ -4,7 +4,7 @@ import Header from "./header/header";
 import Form from "./components/form";
 import Counter from "./task-list/counter";
 import Preview from "./task-list/preview";
-import Task from "./task-list/ulist";
+import Task from "./task-list/task";
 import Input from "./components/input";
 import Button from "./components/button";
 import Img from "./components/img";
@@ -53,7 +53,6 @@ export default function App() {
         />
         <Button
           type="button"
-          className="task-form__button font"
           uList={uList}
           setUList={setUList}
           inputState={inputState}

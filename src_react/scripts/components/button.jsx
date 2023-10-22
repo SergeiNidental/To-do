@@ -1,8 +1,9 @@
 import React from "react";
 
+import "../../../src/styles/components/__button";
+
 export default function Button({
   type,
-  className,
   uList,
   setUList,
   inputState,
@@ -22,7 +23,11 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={className} onPointerDown={handleClick}>
+    <button
+      type={type}
+      className="task-form__button"
+      onPointerDown={handleClick}
+    >
       Add {children}
     </button>
   );
