@@ -2,6 +2,9 @@ import React, { useCallback } from "react";
 import { Img } from "../header/header";
 import { Input } from "../addform/form";
 
+import vector from "../../../src/img/vector";
+import trash from "../../../src/img/trash";
+
 export default function Task({
   className,
   liClass,
@@ -54,13 +57,13 @@ export default function Task({
           {e.value}
         </Label>
         <Img
-          src="../src/img/vector.svg"
+          src={vector}
           alt="vector"
           className={vectorClass}
           onChangeClass={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />
         <Img
-          src="../src/img/trash.svg"
+          src={trash}
           alt="trash"
           className={trashClass}
           onPointerDown={

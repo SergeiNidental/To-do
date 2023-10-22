@@ -6,6 +6,9 @@ import Counter from "./task-list/counter";
 import Preview from "./task-list/preview";
 import Task from "./task-list/ulist";
 
+import logo from "../../src/img/logo";
+import plus from "../../src/img/plus";
+
 export default function App() {
   const [uList, setUList] = useState([]);
   const [inputState, setInputState] = useState("");
@@ -35,7 +38,7 @@ export default function App() {
   return (
     <>
       <Header className="header">
-        <Img src="../src/img/logo.svg" alt="logo" className="header__logo" />
+        <Img src={logo} alt="logo" className="header__logo" />
       </Header>
       <Form className="task-form">
         <Input
@@ -54,11 +57,7 @@ export default function App() {
           inputState={inputState}
           setInputState={setInputState}
         >
-          <Img
-            src="../src/img/plus.svg"
-            alt="plus"
-            className="task-form__img"
-          />
+          <Img src={plus} alt="plus" className="task-form__img" />
         </Button>
       </Form>
       <Form className="task-list">
