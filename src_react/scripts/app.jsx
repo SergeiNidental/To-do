@@ -40,7 +40,7 @@ export default function App() {
   );
   return (
     <>
-      <Header className="header">
+      <Header>
         <Img src={logo} alt="logo" className="header__logo" />
       </Header>
       <Form className="task-form">

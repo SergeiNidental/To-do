@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Header({ className, children }) {
-  return <header className={className}>{children}</header>;
+import "../../../src/styles/components/__header";
+
+export default function Header({ children }) {
+  return <header className="header">{children}</header>;
 }
