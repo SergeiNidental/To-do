@@ -1,0 +1,20 @@
+/* __task-form__button */
+.task-form__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(30, 111, 159, 1);
+  border: 0;
+  border-radius: 8px;
+  height: 52px;
+  width: 90px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+.task-form__button:hover {
+  background-color: rgb(39, 144, 204);
+}
