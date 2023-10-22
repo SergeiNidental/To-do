@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 
 import { Header, Img } from "./header/header";
-import { Form, Input, Button } from "./addform/form";
+import Form from "./addform/form";
 import Counter from "./task-list/counter";
 import Preview from "./task-list/preview";
 import Task from "./task-list/ulist";
+import Input from "./addform/input";
+import Button from "./addform/button";
 
 import logo from "../../src/img/logo";
 import plus from "../../src/img/plus";

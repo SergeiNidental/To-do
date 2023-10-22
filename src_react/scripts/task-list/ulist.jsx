@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { Img } from "../header/header";
-import { Input } from "../addform/form";
+import Input from "../addform/input";
 
 import vector from "../../../src/img/vector";
 import trash from "../../../src/img/trash";
