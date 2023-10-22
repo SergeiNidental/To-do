@@ -62,7 +62,7 @@ export default function App() {
         </Button>
       </Form>
       <Form isQuestForm={false}>
-        <Counter className="task-list__content" uList={uList} />
+        <Counter uList={uList} />
         <Preview
           className="task-list__preview"
           classNameWrapper="task-list__preview-wrapper"

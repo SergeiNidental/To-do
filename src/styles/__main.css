@@ -55,22 +55,6 @@ body {
 
 /* __content */
 
-/* __content */
-.task-list__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  max-width: 736px;
-  width: 100%;
-  font-weight: 400;
-}
-
-@media only screen and (max-width: 320px) {
-  .task-list__content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 /* __left-bar */
 .task-list__left-bar {
   color: rgba(78, 168, 222, 1);

@@ -1,10 +1,12 @@
 import React from "react";
 
+import "../../../src/styles/components/__counter";
+
 import Bar from "../components/bar";
 
-export default function Counter({ className, uList }) {
+export default function Counter({ uList }) {
   return (
-    <div className={className}>
+    <div className="task-list__content">
       <Bar
         className="wrapper-left"
         classFirstSpan="task-list__left-bar"
