@@ -48,7 +48,6 @@ export default function Task({
         <Input
           type="checkbox"
           id={`checkbox-${index}`}
-          className={inputClass}
           checked={e.checked}
           onChangeCheckbox={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />

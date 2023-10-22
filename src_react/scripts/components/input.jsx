@@ -1,8 +1,9 @@
 import React from "react";
 
+import "../../../src/styles/components/__input";
+
 export default function Input({
   type,
-  className,
   placeholder,
   id,
   checked,
@@ -11,6 +12,8 @@ export default function Input({
   onChangeLine,
   onChangeCheckbox,
 }) {
+  const className =
+    type === "text" ? "task-form__input-text font" : "task-list__checkbox";
   if (id) {
     return (
       <input

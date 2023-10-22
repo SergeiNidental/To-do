@@ -46,7 +46,6 @@ export default function App() {
       <Form isQuestForm={true}>
         <Input
           type="text"
-          className="task-form__input-text font"
           placeholder="Add a new task"
           inputState={inputState}
           setInputState={setInputState}
@@ -74,7 +73,6 @@ export default function App() {
         <Task
           className="task-list__ul"
           liClass="task-list__checkbox-wrapper"
-          inputClass="task-list__checkbox"
           labelClass="task-list__label"
           vectorClass="task-list__vector"
           trashClass="task-list__trash"
