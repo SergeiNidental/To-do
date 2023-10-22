@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
-import { Img } from "../header/header";
-import Input from "../addform/input";
+import Img from "../components/img";
+import Input from "../components/input";
+import Label from "../components/label";
 
 import vector from "../../../src/img/vector";
 import trash from "../../../src/img/trash";
@@ -76,12 +77,4 @@ export default function Task({
   });
 
   return <ul className={className}>{taskList}</ul>;
-}
-
-function Label({ htmlFor, className, children }) {
-  return (
-    <label htmlFor={htmlFor} className={className}>
-      {children}
-    </label>
-  );
 }

@@ -1,7 +1,7 @@
 import React from "react"; // TODO: che za import done
 
-import { Img } from "../header/header";
-import { Span } from "../task-list/counter";
+import Img from "../components/img";
+import Span from "../components/span";
 
 import clipboard from "../../../src/img/clipboard";
 
