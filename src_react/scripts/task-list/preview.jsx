@@ -5,16 +5,21 @@ import { Span } from "../task-list/counter";
 
 import clipboard from "../../../src/img/clipboard";
 
-export default function Preview(props) {
+export default function Preview({
+  className,
+  classNameWrapper,
+  classNameImgWrapper,
+  uList,
+}) {
   return (
-    <div className={props.className}>
+    <div className={className}>
       <div
-        className={props.classNameWrapper}
-        style={{ display: props.uList.length > 0 ? "none" : "flex" }} // TODO huynya, delay modificatorom, use classNames
+        className={classNameWrapper}
+        style={{ display: uList.length > 0 ? "none" : "flex" }} // TODO huynya, delay modificatorom, use classNames
       >
-        <div className={props.classNameImgWrapper}>
+        <div className={classNameImgWrapper}>
           <Img
-            src={clipboard} // TODO: import inline
+            src={clipboard} // TODO: import inline done
             alt="clipboard"
             className="task-list__img-preview"
           />

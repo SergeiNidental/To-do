@@ -1,14 +1,14 @@
-import React, { Children, StrictMode } from "react";
+import React from "react";
 
-export default function Counter(props) {
+export default function Counter({ className, uList }) {
   return (
-    <div className={props.className}>
+    <div className={className}>
       <Bar
         className="wrapper-left"
         classFirstSpan="task-list__left-bar"
         classSecondSpan="task-list__left-counter"
         classCounterNumber="task-list_counter-wrapper"
-        uList={props.uList}
+        uList={uList}
         id="left"
       />
       <Bar
@@ -16,43 +16,46 @@ export default function Counter(props) {
         classFirstSpan="task-list__right-bar"
         classSecondSpan="task-list__right-counter"
         classCounterNumber="task-list_counter-wrapper"
-        uList={props.uList}
+        uList={uList}
         id="right"
       />
     </div>
   );
 }
 
-function Bar(props) {
+function Bar({
+  className,
+  classFirstSpan,
+  classSecondSpan,
+  classCounterNumber,
+  uList,
+  id,
+}) {
   return (
-    <div className={props.className}>
-      <Span className={props.classFirstSpan} value="Created tasks" />
-      <Span className={props.classSecondSpan}>
-        <CounterNumber
-          className={props.classCounterNumber}
-          uList={props.uList}
-          id={props.id}
-        />
+    <div className={className}>
+      <Span className={classFirstSpan} value="Created tasks" />
+      <Span className={classSecondSpan}>
+        <CounterNumber className={classCounterNumber} uList={uList} id={id} />
       </Span>
     </div>
   );
 }
 
-export function Span(props) {
-  if (props.children) {
-    return <span className={props.className}>{props.children}</span>;
+export function Span({ className, value, children }) {
+  if (children) {
+    return <span className={className}>{children}</span>;
   } else {
-    return <span className={props.className}>{props.value}</span>;
+    return <span className={className}>{value}</span>;
   }
 }
 
-function CounterNumber(props) {
+function CounterNumber({ className, uList, id }) {
   let content;
-  if (props.id == "left") {
-    content = props.uList ? props.uList.length : 0;
-  } else if (props.id == "right") {
-    if (props.uList.length !== 0) {
-      content = props.uList.reduce((accum, item) => {
+  if (id == "left") {
+    content = uList ? uList.length : 0;
+  } else if (id == "right") {
+    if (uList.length !== 0) {
+      content = uList.reduce((accum, item) => {
         if (item.checked == true) {
           return accum + 1;
         } else {
@@ -63,5 +66,5 @@ function CounterNumber(props) {
       content = 0;
     }
   }
-  return <div className={props.className}>{content}</div>;
+  return <div className={className}>{content}</div>;
 }

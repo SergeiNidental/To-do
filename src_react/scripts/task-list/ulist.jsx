@@ -2,8 +2,17 @@ import React, { useCallback } from "react";
 import { Img } from "../header/header";
 import { Input } from "../addform/form";
 
-export default function Task(props) {
-  const uListLength = props.uList.length;
+export default function Task({
+  className,
+  liClass,
+  inputClass,
+  labelClass,
+  vectorClass,
+  trashClass,
+  uList,
+  setUList,
+}) {
+  const uListLength = uList.length;
 
   if (uListLength === 0) return null; // TODO: stric compare === done
 
@@ -18,30 +27,28 @@ export default function Task(props) {
 
       setList(updatedList);
     },
-    [props.uList, props.setUList]
+    [uList, setUList]
   );
 
   const handleDelete = useCallback(
     (e) => {
-      const updatedList = props.uList.filter((object) => object.id !== e.id);
-      props.setUList(updatedList);
+      const updatedList = uList.filter((object) => object.id !== e.id);
+      setUList(updatedList);
     },
-    [props.uList]
+    [uList]
   );
 
-  const taskList = props.uList.map((e, index) => {
+  const taskList = uList.map((e, index) => {
     return (
-      <li className={props.liClass} key={e.key}>
+      <li className={liClass} key={e.key}>
         <Input
           type="checkbox"
           id={`checkbox-${index}`}
-          className={props.inputClass}
+          className={inputClass}
           checked={e.checked}
-          onChangeCheckbox={() =>
-            handleLabelClick(e, props.uList, props.setUList)
-          } // TODO: usecallback done
+          onChangeCheckbox={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />
-        <Label htmlFor={`checkbox-${index}`} className={props.labelClass}>
+        <Label htmlFor={`checkbox-${index}`} className={labelClass}>
           {" "}
           {/* TODO: ``  done*/}
           {e.value}
@@ -49,13 +56,13 @@ export default function Task(props) {
         <Img
           src="../src/img/vector.svg"
           alt="vector"
-          className={props.vectorClass}
-          onChangeClass={() => handleLabelClick(e, props.uList, props.setUList)} // TODO: usecallback done
+          className={vectorClass}
+          onChangeClass={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />
         <Img
           src="../src/img/trash.svg"
           alt="trash"
-          className={props.trashClass}
+          className={trashClass}
           onPointerDown={
             () => handleDelete(e)
             // TODO: usecallback done
@@ -65,13 +72,13 @@ export default function Task(props) {
     );
   });
 
-  return <ul className={props.className}>{taskList}</ul>;
+  return <ul className={className}>{taskList}</ul>;
 }
 
-function Label(props) {
+function Label({ htmlFor, className, children }) {
   return (
-    <label htmlFor={props.htmlFor} className={props.className}>
-      {props.children}
+    <label htmlFor={htmlFor} className={className}>
+      {children}
     </label>
   );
 }

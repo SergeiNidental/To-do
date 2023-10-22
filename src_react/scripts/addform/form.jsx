@@ -1,29 +1,39 @@
 import React from "react";
 
-export function Form(props) {
+export function Form({ className, children }) {
   // TODO: COMPONENT TO SEPARATE FOLDER AND FILE
-  return <form className={props.className}>{props.children}</form>;
+  return <form className={className}>{children}</form>;
 }
 
-export function Input(props) {
-  if (props.id) {
+export function Input({
+  type,
+  className,
+  placeholder,
+  id,
+  checked,
+  inputState,
+  setInputState,
+  onChangeLine,
+  onChangeCheckbox,
+}) {
+  if (id) {
     return (
       <input
-        type={props.type}
-        className={props.className}
-        id={props.id}
-        checked={props.checked}
-        onChange={props.onChangeCheckbox}
+        type={type}
+        className={className}
+        id={id}
+        checked={checked}
+        onChange={onChangeCheckbox}
       />
     );
   } else {
     return (
       <input
-        type={props.type}
-        className={props.className}
-        placeholder={props.placeholder}
-        onChange={props.onChangeLine}
-        value={props.inputState}
+        type={type}
+        className={className}
+        placeholder={placeholder}
+        onChange={onChangeLine}
+        value={inputState}
       />
     );
   }
@@ -38,7 +48,7 @@ export function Button({
   setInputState,
   children,
 }) {
-  // TODO: DESCRTRUCURE {....}
+  // TODO: DESCRTRUCURE {....} done
   function handleClick() {
     const uListKey = uList.length + 1;
 

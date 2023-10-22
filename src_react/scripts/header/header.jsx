@@ -1,26 +1,26 @@
 import React from "react";
 
-export function Header(props) {
-  return <header className={props.className}>{props.children}</header>;
+export function Header({ className, children }) {
+  return <header className={className}>{children}</header>;
 }
 
-export function Img(props) {
-  let onPointerDown;
+export function Img({ src, alt, className, onChangeClass, onPointerDown }) {
+  let PointerDown;
 
-  if (props.alt === "vector") {
-    onPointerDown = props.onChangeClass;
+  if (alt === "vector") {
+    PointerDown = onChangeClass;
   }
 
-  if (props.alt === "trash") {
-    onPointerDown = props.onPointerDown;
+  if (alt === "trash") {
+    PointerDown = onPointerDown;
   }
 
   return (
     <img
-      src={props.src}
-      alt={props.alt}
-      className={props.className}
-      onPointerDown={onPointerDown}
+      src={src}
+      alt={alt}
+      className={className}
+      onPointerDown={PointerDown}
     />
   );
 }
