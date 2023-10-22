@@ -8,7 +8,6 @@ export default function Counter({ uList }) {
   return (
     <div className="task-list__content">
       <Bar
-        className="wrapper-left"
         classFirstSpan="task-list__left-bar"
         classSecondSpan="task-list__left-counter"
         classCounterNumber="task-list_counter-wrapper"
@@ -16,7 +15,6 @@ export default function Counter({ uList }) {
         id="left"
       />
       <Bar
-        className="wrapper-right"
         classFirstSpan="task-list__right-bar"
         classSecondSpan="task-list__right-counter"
         classCounterNumber="task-list_counter-wrapper"

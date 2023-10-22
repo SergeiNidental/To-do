@@ -80,12 +80,7 @@ body {
   text-align: center;
   margin-right: 10px;
 }
-/* _wrapper-to-centre */
-.wrapper-left,
-.wrapper-right {
-  display: flex;
-  align-items: center;
-}
+
 /* __preview */
 
 /* __preview */

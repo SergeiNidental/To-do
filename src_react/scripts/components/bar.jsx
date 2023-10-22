@@ -1,9 +1,11 @@
 import React from "react";
+
+import "../../../src/styles/components/__bar";
+
 import CounterNumber from "./counterNumber";
 import Span from "./span";
 
 export default function Bar({
-  className,
   classFirstSpan,
   classSecondSpan,
   classCounterNumber,
@@ -11,7 +13,7 @@ export default function Bar({
   id,
 }) {
   return (
-    <div className={className}>
+    <div className="wrapper-both">
       <Span className={classFirstSpan} value="Created tasks" />
       <Span className={classSecondSpan}>
         <CounterNumber className={classCounterNumber} uList={uList} id={id} />
