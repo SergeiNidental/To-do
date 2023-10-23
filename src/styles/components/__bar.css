@@ -3,3 +3,9 @@
   display: flex;
   align-items: center;
 }
+
+@media only screen and (max-width: 320px) {
+  .wrapper-both {
+    padding-top: 10px;
+  }
+}

@@ -9,6 +9,8 @@ import Input from "./components/input";
 import Button from "./components/button";
 import Img from "./components/img";
 
+import "../../src/styles/common_rules/__main";
+
 import logo from "../../src/img/logo";
 import plus from "../../src/img/plus";
 
@@ -39,7 +41,7 @@ export default function App() {
     [inputState]
   );
   return (
-    <>
+    <div className="body">
       <Header>
         <Img src={logo} alt="logo" />
       </Header>
@@ -66,6 +68,6 @@ export default function App() {
         <Preview uList={uList} />
         <Task uList={uList} setUList={setUList} />
       </Form>
-    </>
+    </div>
   );
 }
