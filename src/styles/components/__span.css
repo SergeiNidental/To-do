@@ -1,0 +1,26 @@
+/* __left-bar */
+.task-list__left-bar {
+  color: rgba(78, 168, 222, 1);
+  margin-left: 10px;
+}
+/* right-bar */
+.task-list__right-bar {
+  color: rgba(130, 132, 250, 1);
+}
+
+/*__task-list__text*/
+.task-list__text {
+  text-align: center;
+  padding: 3em;
+  color: rgba(128, 128, 128, 1);
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 0.9;
+}
+
+@media only screen and (max-width: 320px) {
+  .task-list__text {
+    font-size: 0.8em;
+    padding: 1em 3em 3em 3em;
+  }
+}

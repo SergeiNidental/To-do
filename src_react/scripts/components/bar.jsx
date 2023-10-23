@@ -12,10 +12,11 @@ export default function Bar({
   uList,
   id,
 }) {
+  const value = id === "left" ? "Created tasks" : "Completed tasks";
   return (
     <div className="wrapper-both">
-      <Span className={classFirstSpan} value="Created tasks" />
-      <Span className={classSecondSpan}>
+      <Span id={id} value={value} />
+      <Span>
         <CounterNumber className={classCounterNumber} uList={uList} id={id} />
       </Span>
     </div>

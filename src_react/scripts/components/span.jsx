@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function Span({ className, value, children }) {
-  if (children) {
-    return <span className={className}>{children}</span>;
-  } else {
-    return <span className={className}>{value}</span>;
-  }
+import "../../../src/styles/components/__span";
+
+export default function Span({ id, value, children }) {
+  let currentClass = children
+    ? ""
+    : id === "left"
+    ? "task-list__left-bar"
+    : "task-list__right-bar";
+  return <span className={currentClass}>{children ? children : value}</span>;
 }
