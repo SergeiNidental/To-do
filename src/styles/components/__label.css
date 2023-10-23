@@ -1,0 +1,7 @@
+.task-list__label {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}

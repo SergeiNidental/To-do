@@ -44,7 +44,7 @@ export default function Task({ uList, setUList }) {
           checked={e.checked}
           onChangeCheckbox={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />
-        <Label htmlFor={`checkbox-${index}`} className="task-list__label">
+        <Label htmlFor={`checkbox-${index}`}>
           {" "}
           {/* TODO: ``  done*/}
           {e.value}

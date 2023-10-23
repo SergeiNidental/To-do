@@ -29,11 +29,3 @@
     font-size: 0.7em;
   }
 }
-
-.task-list__label {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  white-space: normal;
-  word-wrap: break-word;
-}

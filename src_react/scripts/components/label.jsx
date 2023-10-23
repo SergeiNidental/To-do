@@ -1,8 +1,10 @@
 import React from "react";
 
-export default function Label({ htmlFor, className, children }) {
+import "../../../src/styles/components/__label";
+
+export default function Label({ htmlFor, children }) {
   return (
-    <label htmlFor={htmlFor} className={className}>
+    <label htmlFor={htmlFor} className="task-list__label">
       {children}
     </label>
   );
