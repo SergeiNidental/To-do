@@ -3,19 +3,12 @@ import Img from "../components/img";
 import Input from "../components/input";
 import Label from "../components/label";
 
+import "../../../src/styles/components/__task";
+
 import vector from "../../../src/img/vector";
 import trash from "../../../src/img/trash";
 
-export default function Task({
-  className,
-  liClass,
-  inputClass,
-  labelClass,
-  vectorClass,
-  trashClass,
-  uList,
-  setUList,
-}) {
+export default function Task({ uList, setUList }) {
   const uListLength = uList.length;
 
   if (uListLength === 0) return null; // TODO: stric compare === done
@@ -44,14 +37,14 @@ export default function Task({
 
   const taskList = uList.map((e, index) => {
     return (
-      <li className={liClass} key={e.key}>
+      <li className="task-list__checkbox-wrapper" key={e.key}>
         <Input
           type="checkbox"
           id={`checkbox-${index}`}
           checked={e.checked}
           onChangeCheckbox={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />
-        <Label htmlFor={`checkbox-${index}`} className={labelClass}>
+        <Label htmlFor={`checkbox-${index}`} className="task-list__label">
           {" "}
           {/* TODO: ``  done*/}
           {e.value}
@@ -59,13 +52,11 @@ export default function Task({
         <Img
           src={vector}
           alt="vector"
-          className={vectorClass}
           onChangeClass={() => handleLabelClick(e, uList, setUList)} // TODO: usecallback done
         />
         <Img
           src={trash}
           alt="trash"
-          className={trashClass}
           onPointerDown={
             () => handleDelete(e)
             // TODO: usecallback done
@@ -75,5 +66,5 @@ export default function Task({
     );
   });
 
-  return <ul className={className}>{taskList}</ul>;
+  return <ul className="task-list__ul">{taskList}</ul>;
 }

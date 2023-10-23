@@ -64,13 +64,7 @@ export default function App() {
       <Form isQuestForm={false}>
         <Counter uList={uList} />
         <Preview uList={uList} />
-        <Task
-          className="task-list__ul"
-          liClass="task-list__checkbox-wrapper"
-          labelClass="task-list__label"
-          uList={uList}
-          setUList={setUList}
-        />
+        <Task uList={uList} setUList={setUList} />
       </Form>
     </>
   );
