@@ -41,7 +41,7 @@ export default function App() {
     [inputState]
   );
   return (
-    <div className="body">
+    <>
       <Header>
         <Img src={logo} alt="logo" />
       </Header>
@@ -68,6 +68,6 @@ export default function App() {
         <Preview uList={uList} />
         <Task uList={uList} setUList={setUList} />
       </Form>
-    </div>
+    </>
   );
 }
