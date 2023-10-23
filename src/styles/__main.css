@@ -90,16 +90,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-/* __img-preview */
-.task-list__img-preview {
-  height: 130%;
-}
-
-@media only screen and (max-width: 320px) {
-  .task-list__img-preview {
-    height: 60%;
-  }
-}
 
 /* _thin-font */
 .task-list__second-paragrah_thin-font {

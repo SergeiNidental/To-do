@@ -10,7 +10,7 @@ export default function Bar({ classCounterNumber, uList, id }) {
   return (
     <div className="wrapper-both">
       <Span id={id} value={value} />
-      <Span>
+      <Span id={"empty"}>
         <CounterNumber className={classCounterNumber} uList={uList} id={id} />
       </Span>
     </div>

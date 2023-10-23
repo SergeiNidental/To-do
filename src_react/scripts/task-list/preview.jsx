@@ -24,7 +24,7 @@ export default function Preview({
             className="task-list__img-preview"
           />
         </div>
-        <Span className="task-list__text">
+        <Span className="task-list__text" id={"preview"}>
           You don't have any registered tasks yet <br />
           <p className="task-list__second-paragrah task-list__second-paragrah_thin-font">
             Create tasks and organize your tasks

@@ -13,6 +13,9 @@ export default function Img({ src, alt, onChangeClass, onPointerDown }) {
     case "plus":
       className = "task-form__img";
       break;
+    case "clipboard":
+      className = "task-list__img-preview";
+      break;
     case "vector":
       className = "task-list__vector";
       PointerDown = onChangeClass;
