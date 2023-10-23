@@ -8,11 +8,13 @@ import "../../../src/styles/components/__preview";
 import clipboard from "../../../src/img/clipboard";
 
 export default function Preview({ uList }) {
+  const previewWrapper =
+    uList.length > 0 ? "hidden" : "task-list__preview-wrapper";
+
   return (
     <div className="task-list__preview">
       <div
-        className="task-list__preview-wrapper"
-        style={{ display: uList.length > 0 ? "none" : "flex" }} // TODO huynya, delay modificatorom, use classNames
+        className={previewWrapper} // TODO huynya, delay modificatorom, use classNames done
       >
         <div className="task-list__preview-img">
           <Img
