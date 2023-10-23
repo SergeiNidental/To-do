@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../../../src/styles/components/__counterNumber";
+
 export default function CounterNumber({ className, uList, id }) {
   let content;
   if (id == "left") {
@@ -17,5 +19,5 @@ export default function CounterNumber({ className, uList, id }) {
       content = 0;
     }
   }
-  return <div className={className}>{content}</div>;
+  return <div className="task-list_counter-wrapper">{content}</div>;
 }

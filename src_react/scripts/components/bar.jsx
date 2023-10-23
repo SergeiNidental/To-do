@@ -5,13 +5,7 @@ import "../../../src/styles/components/__bar";
 import CounterNumber from "./counterNumber";
 import Span from "./span";
 
-export default function Bar({
-  classFirstSpan,
-  classSecondSpan,
-  classCounterNumber,
-  uList,
-  id,
-}) {
+export default function Bar({ classCounterNumber, uList, id }) {
   const value = id === "left" ? "Created tasks" : "Completed tasks";
   return (
     <div className="wrapper-both">
