@@ -68,14 +68,8 @@ module.exports = {
       },
       {
         test: /\.(ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "fonts/[name].[ext]",
-            },
-          },
-        ],
+        type: "asset/resource",
+        dependency: { not: ["url"] },
       },
       {
         test: /\.m?js$/,
